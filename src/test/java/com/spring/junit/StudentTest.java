@@ -4,7 +4,19 @@ import org.junit.jupiter.api.*;
 
 class StudentTest {
 
-    private Student student;
+    @Test
+    void testing(){
+        Student student = new Student();
+        Assertions.assertAll
+                ("Student Data",
+                    () -> Assertions.assertEquals(student.getName(),"Eslam","Name not Matches"),
+                    () -> Assertions.assertEquals(student.getAge(),"20","Age  not Matches")
+                );
+    }
+
+}
+
+/*
 
     @BeforeEach
     void setUpFunction() {
@@ -22,5 +34,4 @@ class StudentTest {
         //Assertions.assertEquals(student.getAge(),"22","Age not Matches");
         Assertions.assertTrue("22".equals(student.getAge()),() -> "Age not Matches");
     }
-
-}
+* */
