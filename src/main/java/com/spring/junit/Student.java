@@ -29,6 +29,8 @@ public class Student {
         } else {
             return null;
         }
-
+    }
+    public void getException(){
+        throw new SpecialException();
     }
 }
