@@ -7,11 +7,9 @@ class PersonTest {
 
     @Test
     void personTest1() {
-        System.out.println("11111");
     }
     @Test
     void personTest(){
-        System.out.println("22222");
         Person person = new Person();
         /*Assertions.assertAll
                 ("Student Data",
@@ -23,13 +21,13 @@ class PersonTest {
         Assertions.assertAll("Person Data",
                 () -> Assertions.assertAll
                         ("Person Names",
-                                () -> Assertions.assertEquals(person.getFName(),"Eslamm","F Name not Matches"),
+                                () -> Assertions.assertEquals(person.getFName(),"Eslam","F Name not Matches"),
                                 () -> Assertions.assertEquals(person.getLName(),"Khder","L Name  not Matches")
                         ),
                 () -> Assertions.assertAll
                         ("Person Phones",
                                 () -> Assertions.assertEquals(person.getPhone1(),"01113903660","Phone not Matches"),
-                                () -> Assertions.assertEquals(person.getPhone2(),"012555828555","Phone  not Matches")
+                                () -> Assertions.assertEquals(person.getPhone2(),"01255582855","Phone  not Matches")
                         )
                );
     }
