@@ -11,6 +11,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class StudentTest {
 
     @Test
+    void newTest(){
+        Assertions.assertTrue("Eslam".equalsIgnoreCase("ESLAML"));
+    }
+
+}
+/*
+@Test
     @DisplayName("Test Student By Id")
     void findById() {
         Student student = new Student();
@@ -18,4 +25,4 @@ class StudentTest {
         Assertions.assertThrows(MissingFormatArgumentException.class,
                 () -> student.getException());
     }
-}
+* */
