@@ -1,18 +1,21 @@
 package com.spring.junit;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
+
+import org.assertj.core.api.Assertions;
+
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
-import java.util.MissingFormatArgumentException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
 
     @Test
     void newTest(){
-        Assertions.assertTrue("Eslam".equalsIgnoreCase("ESLAML"));
+        Student student = new Student();
+        //Assertions.assertThat(student.getName()).isEqualTo("Eslamm");
+        //Assertions.assertTrue("Eslam".equalsIgnoreCase("ESLAML"));
+        MatcherAssert.assertThat(student.getName(), Matchers.is("Eslam"));
     }
 
 }
