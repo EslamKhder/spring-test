@@ -2,7 +2,8 @@ package com.spring.junit;
 
 import org.junit.jupiter.api.*;
 
-@Disabled
+//@Disabled
+@Tag("person")
 class PersonTest {
 
     @Test

@@ -1,13 +1,12 @@
 package com.spring.junit;
 
 
-import org.assertj.core.api.Assertions;
-
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-
+@Tag("student")
 class StudentTest {
 
     @Test
