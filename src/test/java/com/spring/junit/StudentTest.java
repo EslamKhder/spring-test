@@ -3,13 +3,32 @@ package com.spring.junit;
 import org.assertj.core.api.Assertions;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.springframework.test.annotation.Repeat;
 
 @Tag("student")
 class StudentTest {
+
+    @Test
+    @DisplayName("Hi Function")
+    @RepeatedTest(value = 5,name = "{displayName} : {currentRepetition} | {totalRepetitions}")
+    void myTest(){
+        System.out.println("HI");
+    }
+
+}
+
+
+
+/*
+@Test
+    @DisplayName("Test Student By Id")
+    void findById() {
+        Student student = new Student();
+        //Assertions.assertEquals(student.findById(1), null);
+        Assertions.assertThrows(MissingFormatArgumentException.class,
+                () -> student.getException());
+    }
 
 
     @BeforeEach
@@ -38,15 +57,5 @@ class StudentTest {
             Student student = new Student();
             Assertions.assertThat(student.getName()).isEqualTo("Eslam");
         }
-    }
-}
-/*
-@Test
-    @DisplayName("Test Student By Id")
-    void findById() {
-        Student student = new Student();
-        //Assertions.assertEquals(student.findById(1), null);
-        Assertions.assertThrows(MissingFormatArgumentException.class,
-                () -> student.getException());
     }
 * */
