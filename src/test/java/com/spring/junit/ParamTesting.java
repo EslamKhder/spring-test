@@ -3,10 +3,9 @@ package com.spring.junit;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.EnumSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.*;
+
+import java.util.stream.Stream;
 
 public class ParamTesting {
 
@@ -48,6 +47,22 @@ public class ParamTesting {
         System.out.println("phone: " + phone);
     }
 
+    @DisplayName("Param Test")
+    @ParameterizedTest(name = "{displayName}: {index} ===> {arguments}")
+    @MethodSource("getData")
+    void myParamTesting4(String name,int age, String phone){
+        System.out.println("name: " + name);
+        System.out.println("age: " + age);
+        System.out.println("phone: " + phone);
+    }
+
+    static Stream<Arguments> getData(){
+        return Stream.of(
+                Arguments.of("Ahmed" ,21, "01235"),
+                Arguments.of("Karim" ,19, "012254"),
+                Arguments.of("Jo" ,17, "0125558")
+        );
+    }
 
 
 }
