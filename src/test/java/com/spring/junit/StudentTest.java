@@ -16,6 +16,17 @@ class StudentTest {
         System.out.println("HI");
     }
 
+    //@Test
+    @DisplayName("funRepeated Function")
+    @RepeatedTest(3)
+    void funRepeated(TestInfo testInfo,RepetitionInfo repetitionInfo){
+
+        System.out.println(testInfo.getDisplayName());
+        System.out.println(testInfo.getTestClass());
+        System.out.println(testInfo.getTestMethod());
+        System.out.println(testInfo.getTags());
+        System.out.println(repetitionInfo.getCurrentRepetition());
+    }
 }
 
 
