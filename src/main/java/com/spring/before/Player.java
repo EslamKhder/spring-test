@@ -8,7 +8,6 @@ public class Player {
     String name;
     private List<String> players = new LinkedList<>();
 
-
      public Player(){
          players.add("Treka");
          players.add("Messi");
